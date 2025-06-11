@@ -2,10 +2,6 @@
 
 This folder contains real-world projects built using web technologies.
 
-### 📂 Current Projects:
-- **Portfolio Website** – A personal portfolio with responsive design.
-- **Todo App** – A JavaScript-based task manager with local storage.
-
 Each project folder includes:
 - Full source code
 - Screenshots (if available)
