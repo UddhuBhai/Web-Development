@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate Protocol</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>FATE PROTOCOL</h1>
+
+        <p class="subtitle">
+            Where destiny makes the decision.
+        </p>
+
+        <div class="input-group">
+
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="Enter participant name..."
+            >
+
+            <button id="addBtn">
+                Register
+            </button>
+
+        </div>
+
+        <section class="participants">
+
+            <h2>Participants</h2>
+
+            <div id="participantList">
+
+                <p class="empty">
+                    No participants yet.<br>
+                    Add at least two names to begin.
+                </p>
+
+            </div>
+
+        </section>
+
+        <button id="protocolBtn" disabled>
+            Begin Protocol
+        </button>
+
+        <p id="status"></p>
+
+        <section id="result">
+
+            <h2>DESTINY CONFIRMED</h2>
+
+            <h3 id="chosenName"></h3>
+
+            <p id="fateMessage"></p>
+
+            <button id="againBtn">
+                Run Again
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

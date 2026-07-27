@@ -1,0 +1,207 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #0B1120;
+    color: #F8FAFC;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+
+    background: #1E293B;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 0 30px rgba(124,58,237,.18);
+}
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+
+    text-align: center;
+
+    color: #A855F7;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #94A3B8;
+
+    margin-bottom: 35px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+input {
+    flex: 1;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: 2px solid transparent;
+
+    background: #0F172A;
+
+    color: white;
+
+    outline: none;
+
+    transition: .25s;
+}
+
+input:focus {
+    border-color: #7C3AED;
+}
+
+button {
+    cursor: pointer;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 14px 18px;
+
+    background: #7C3AED;
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: .25s;
+}
+
+button:hover:not(:disabled) {
+    background: #8B5CF6;
+
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: #475569;
+
+    cursor: not-allowed;
+}
+
+#protocolBtn,
+#againBtn {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.participants h2 {
+    margin-bottom: 15px;
+}
+
+#participantList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.empty {
+    text-align: center;
+
+    color: #94A3B8;
+
+    padding: 20px 0;
+}
+
+.participant {
+    background: #0F172A;
+
+    border-left: 4px solid #7C3AED;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    transition: .25s;
+}
+
+.participant:hover {
+    transform: translateX(5px);
+}
+
+#status {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #A855F7;
+
+    min-height: 24px;
+}
+
+#result {
+    display: none;
+
+    margin-top: 35px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    padding-top: 30px;
+
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition: all .4s ease;
+}
+
+#result.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#result h2 {
+    font-family: "Orbitron", sans-serif;
+
+    color: #A855F7;
+
+    margin-bottom: 15px;
+}
+
+#chosenName {
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+    color: #F8FAFC;
+
+    text-shadow: 0 0 10px rgba(168,85,247,.6);
+}
+
+#fateMessage {
+    color: #CBD5E1;
+}
