@@ -1,0 +1,469 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#090909,#111,#1b1b1b);
+
+    color:white;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+.particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background-image:
+    radial-gradient(gold 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    opacity:.08;
+
+}
+
+h1{
+
+    text-align:center;
+
+    font-family:"Cinzel",serif;
+
+    color:#FFD54F;
+
+    font-size:3rem;
+
+    margin-top:40px;
+
+    letter-spacing:2px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#c7c7c7;
+
+    margin-top:10px;
+
+    margin-bottom:50px;
+
+}
+
+#selectionTitle{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    font-size:2rem;
+
+}
+
+.characterGrid{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    padding-bottom:60px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    border:2px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:25px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+    border-color:#FFD54F;
+
+    box-shadow:0 0 25px rgba(255,213,79,.4);
+
+}
+
+.card img{
+
+    width:170px;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+.card h3{
+
+    margin-top:15px;
+
+    font-size:1.5rem;
+
+}
+
+.card p{
+
+    margin-top:8px;
+
+    color:#d6d6d6;
+
+}
+
+.selected{
+
+    border:3px solid gold !important;
+
+    box-shadow:0 0 30px gold;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+#battleScreen{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    min-height:100vh;
+
+}
+
+.fighters{
+
+    width:90%;
+
+    max-width:1200px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    margin-top:60px;
+
+}
+
+.fighter{
+
+    text-align:center;
+
+}
+
+.fighter img{
+
+    width:240px;
+
+    height:240px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:3px solid #FFD54F;
+
+}
+
+.fighter h2{
+
+    margin-top:15px;
+
+}
+
+.fighter p{
+
+    margin-top:8px;
+
+    color:#d5d5d5;
+
+}
+
+.vs{
+
+    font-size:4rem;
+
+    color:#FFD54F;
+
+    font-family:"Cinzel",serif;
+
+}
+
+.diceArea{
+
+    display:flex;
+
+    gap:100px;
+
+    margin:70px 0;
+
+}
+
+.dice{
+
+    width:180px;
+
+    transition:.3s;
+
+}
+
+button{
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#FFD54F;
+
+    color:#111;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px gold;
+
+}
+
+#playAgain{
+
+    margin-top:30px;
+
+}
+
+#result{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    line-height:1.7;
+
+}
+
+#result h2{
+
+    color:#FFD54F;
+
+    margin-bottom:10px;
+
+}
+
+.roll{
+
+    animation:shake .18s infinite;
+
+}
+
+@keyframes shake{
+
+    0%{
+
+        transform:rotate(0deg);
+
+    }
+
+    25%{
+
+        transform:rotate(-12deg);
+
+    }
+
+    50%{
+
+        transform:rotate(12deg);
+
+    }
+
+    75%{
+
+        transform:rotate(-12deg);
+
+    }
+
+    100%{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+.winner{
+
+    animation:glow .8s infinite alternate;
+
+}
+
+@keyframes glow{
+
+    from{
+
+        filter:drop-shadow(0 0 10px gold);
+
+    }
+
+    to{
+
+        filter:drop-shadow(0 0 30px gold);
+
+    }
+
+}
+
+.slash{
+
+    position:fixed;
+
+    top:50%;
+
+    left:-150%;
+
+    width:250%;
+
+    height:6px;
+
+    background:linear-gradient(
+    90deg,
+    transparent,
+    gold,
+    white,
+    gold,
+    transparent);
+
+    transform:rotate(-10deg);
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+@media(max-width:900px){
+
+.characterGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.fighters{
+
+flex-direction:column;
+
+gap:40px;
+
+}
+
+.vs{
+
+font-size:3rem;
+
+margin:20px 0;
+
+}
+
+.diceArea{
+
+gap:40px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.characterGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.card img{
+
+width:150px;
+
+height:150px;
+
+}
+
+.fighter img{
+
+width:180px;
+
+height:180px;
+
+}
+
+.dice{
+
+width:120px;
+
+}
+
+h1{
+
+font-size:2rem;
+
+}
+
+}

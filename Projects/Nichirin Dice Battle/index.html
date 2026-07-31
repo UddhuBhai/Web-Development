@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nichirin Dice Duel</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="particles"></div>
+<div class="slash"></div>
+
+<section id="selectionScreen">
+
+    <h1>⚔ NICHIRIN DICE DUEL ⚔</h1>
+
+    <p class="subtitle">
+        Choose your Demon Slayer...
+    </p>
+
+    <h2 id="selectionTitle">
+        Choose Slayer One
+    </h2>
+
+    <div class="characterGrid">
+
+        <div class="card"
+
+            data-character="Tanjiro"
+            data-style="🌊 Water Breathing"
+            data-image="assets/characters/tanjiro.jpg">
+
+            <img src="assets/characters/tanjiro.jpg" alt="Tanjiro">
+
+            <h3>Tanjiro</h3>
+
+            <p>🌊 Water Breathing</p>
+
+        </div>
+
+        <div class="card"
+
+            data-character="Nezuko"
+            data-style="🌸 Blood Demon Art"
+            data-image="assets/characters/nezuko.jpg">
+
+            <img src="assets/characters/nezuko.jpg" alt="Nezuko">
+
+            <h3>Nezuko</h3>
+
+            <p>🌸 Blood Demon Art</p>
+
+        </div>
+
+        <div class="card"
+
+            data-character="Zenitsu"
+            data-style="⚡ Thunder Breathing"
+            data-image="assets/characters/zenitsu.jpg">
+
+            <img src="assets/characters/zenitsu.jpg" alt="Zenitsu">
+
+            <h3>Zenitsu</h3>
+
+            <p>⚡ Thunder Breathing</p>
+
+        </div>
+
+        <div class="card"
+
+            data-character="Inosuke"
+            data-style="🐗 Beast Breathing"
+            data-image="assets/characters/inosuke.jpg">
+
+            <img src="assets/characters/inosuke.jpg" alt="Inosuke">
+
+            <h3>Inosuke</h3>
+
+            <p>🐗 Beast Breathing</p>
+
+        </div>
+
+        <div class="card"
+
+            data-character="Shinobu"
+            data-style="🦋 Insect Breathing"
+            data-image="assets/characters/shinobu.jpg">
+
+            <img src="assets/characters/shinobu.jpg" alt="Shinobu">
+
+            <h3>Shinobu</h3>
+
+            <p>🦋 Insect Breathing</p>
+
+        </div>
+
+        <div class="card"
+
+            data-character="Giyu"
+            data-style="🌊 Water Breathing"
+            data-image="assets/characters/giyu.jpg">
+
+            <img src="assets/characters/giyu.jpg" alt="Giyu">
+
+            <h3>Giyu</h3>
+
+            <p>🌊 Water Breathing</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="battleScreen" class="hidden">
+
+    <h1>⚔ BATTLE ARENA ⚔</h1>
+
+    <div class="fighters">
+
+        <div class="fighter">
+
+            <img id="char1" src="" alt="Player One">
+
+            <h2 id="name1"></h2>
+
+            <p id="style1"></p>
+
+        </div>
+
+        <div class="vs">
+
+            VS
+
+        </div>
+
+        <div class="fighter">
+
+            <img id="char2" src="" alt="Player Two">
+
+            <h2 id="name2"></h2>
+
+            <p id="style2"></p>
+
+        </div>
+
+    </div>
+
+    <div class="diceArea">
+
+        <img
+            class="dice img1"
+            src="assets/dice/dice1.png"
+            alt="Player One Dice">
+
+        <img
+            class="dice img2"
+            src="assets/dice/dice1.png"
+            alt="Player Two Dice">
+
+    </div>
+
+    <button id="battleBtn">
+
+        ⚔ ROLL DICE ⚔
+
+    </button>
+
+    <div id="result">
+
+    </div>
+
+    <button id="playAgain" class="hidden">
+
+        🔄 PLAY AGAIN
+
+    </button>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
