@@ -1,0 +1,387 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Orbitron',sans-serif;
+
+    background:
+    linear-gradient(rgba(0,0,0,.80),rgba(0,0,0,.85)),
+    url("./assets/images/background.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    color:#F8FAFC;
+
+    min-height:100vh;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+button{
+    border:none;
+    background:none;
+    font:inherit;
+}
+
+header{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+.logo{
+
+    width:180px;
+
+    margin:0 auto 20px;
+
+}
+
+header h1{
+
+    font-size:3rem;
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+
+}
+
+.tagline{
+
+    color:#CBD5E1;
+
+    font-size:1rem;
+
+    letter-spacing:2px;
+
+}
+
+.attack-board{
+
+    width:min(1200px,90%);
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.attack-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+.attack-card img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin:20px auto;
+
+    transition:.35s ease;
+
+}
+
+.attack-card p{
+
+    margin-bottom:20px;
+
+    letter-spacing:1px;
+
+}
+
+.attack-card h2{
+
+    font-size:2rem;
+
+    color:#38BDF8;
+
+}
+
+.attack-card:hover{
+
+    transform:translateY(-10px) scale(1.05);
+
+}
+
+.attack-card:active{
+
+    transform:scale(.95);
+
+}
+
+.attack-card:hover img{
+
+    transform:scale(1.15) rotate(-5deg);
+
+}
+
+.attack-card[data-attack="rasengan"]:hover{
+    box-shadow: 0 0 30px #3B82F6;
+}
+
+.attack-card[data-attack="chidori"]:hover{
+    box-shadow: 0 0 30px #60A5FA;
+}
+
+.attack-card[data-attack="kamehameha"]:hover{
+    box-shadow: 0 0 30px #22D3EE;
+}
+
+.attack-card[data-attack="final-flash"]:hover{
+    box-shadow: 0 0 30px #FACC15;
+}
+
+.attack-card[data-attack="hollow-purple"]:hover{
+    box-shadow: 0 0 30px #A855F7;
+}
+
+.attack-card[data-attack="domain-expansion"]:hover{
+    box-shadow: 0 0 30px #7C3AED;
+}
+
+.attack-card[data-attack="getsuga-tensho"]:hover{
+    box-shadow: 0 0 30px #E2E8F0;
+}
+
+.attack-card[data-attack="bankai"]:hover{
+    box-shadow: 0 0 30px #DC2626;
+}
+
+.attack-card[data-attack="hinokami-kagura"]:hover{
+    box-shadow: 0 0 30px #F97316;
+}
+
+.attack-card[data-attack="thunder-breathing"]:hover{
+    box-shadow: 0 0 30px #EAB308;
+}
+
+.attack-card[data-attack="red-hawk"]:hover{
+    box-shadow: 0 0 30px #EF4444;
+}
+
+.attack-card[data-attack="gum-gum-gatling"]:hover{
+    box-shadow: 0 0 30px #F8FAFC;
+}
+
+.attack-card:hover img{
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 0 15px currentColor);
+    transition: all .35s ease;
+}
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#94A3B8;
+
+}
+
+/* SSJ MODE */
+
+@media(max-width:900px){
+
+.attack-board{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.attack-board{
+
+grid-template-columns:1fr;
+
+}
+
+header h1{
+
+font-size:2rem;
+
+}
+
+.logo{
+
+width:130px;
+
+}
+
+}
+
+.pressed{
+
+    transform: scale(.95);
+
+    filter: brightness(1.3);
+
+    transition:.15s ease;
+
+}
+
+#attack-banner{
+
+    position:fixed;
+
+    top:-120px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:420px;
+    max-width:90%;
+
+    text-align:center;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:rgba(15,23,42,.95);
+
+    border:2px solid #38BDF8;
+
+    color:white;
+
+    font-size:1.4rem;
+
+    letter-spacing:2px;
+
+    opacity:0;
+
+    transition:
+        top .4s ease,
+        opacity .3s ease;
+
+    z-index:9999;
+
+    box-shadow:0 0 15px rgba(56,189,248,.5);
+
+}
+
+#attack-banner.show{
+
+    top:30px;
+    opacity:1;
+
+}
+
+#screen-flash{
+
+    position:fixed;
+
+    inset:0;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:opacity .12s ease;
+
+    z-index:9998;
+
+}
+
+/*SSJ MODE*/
+
+body.ssj{
+
+    filter:
+        brightness(1.2)
+        saturate(1.4);
+
+}
+
+/* Golden Overlay */
+
+body.ssj::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(255,215,0,.12);
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/* Cards */
+
+body.ssj .attack-card{
+
+    border-color:#FFD700;
+
+    box-shadow:
+        0 0 12px #FFD700,
+        0 0 30px #FFD700,
+        0 0 55px #FFD700;
+
+}
+
+/* Banner */
+
+body.ssj #attack-banner{
+
+    background:rgba(255,215,0,.12);
+
+    border:2px solid #FFD700;
+
+    color:#FFD700;
+
+    box-shadow:
+        0 0 15px #FFD700,
+        0 0 35px #FFD700;
+
+}
