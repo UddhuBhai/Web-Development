@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #011F3F;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: #d6d6d6;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+#level-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#high-score {
+    margin-bottom: 35px;
+    color: #ffd54f;
+    font-weight: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    width: 180px;
+    height: 180px;
+    border: 8px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+}
+
+.green {
+    background: #00A74A;
+}
+
+.red {
+    background: #9F0F17;
+}
+
+.yellow {
+    background: #CCA707;
+}
+
+.blue {
+    background: #094A8F;
+}
+
+.flash {
+    background: white !important;
+    box-shadow: 0 0 30px white;
+}
+
+.pressed {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px white;
+}
+
+.game-over {
+    background: crimson;
+}
+
+.instructions {
+    max-width: 600px;
+    margin: 60px auto 30px;
+    padding: 25px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    text-align: left;
+}
+
+.instructions h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.instructions ul {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin: 12px 0;
+    line-height: 1.5;
+}
+
+footer {
+    margin-top: 20px;
+    color: #bcbcbc;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #level-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 140px;
+        height: 140px;
+    }
+
+    .row {
+        gap: 15px;
+    }
+
+    .instructions {
+        margin-top: 40px;
+        padding: 20px;
+    }
+
+}
