@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM - QR EXTRACTION</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="system-card">
+
+            <h1>SYSTEM - QR EXTRACTION</h1>
+
+            <p class="status">
+                STATUS :
+                <span>ONLINE</span>
+            </p>
+
+            <div class="input-section">
+
+                <label for="qrInput">
+                    Command
+                </label>
+
+                <input
+                    type="text"
+                    id="qrInput"
+                    placeholder="Issue a command..."
+                >
+
+            </div>
+
+            <button id="generateBtn">
+                ⚔ ARISE
+            </button>
+
+            <div class="artifact-section">
+
+                <h2>Extracted Artifact</h2>
+
+                <div id="qrContainer">
+
+                    <!-- QR Code Appears Here -->
+
+                </div>
+
+            </div>
+
+            <button id="downloadBtn">
+                CLAIM ARTIFACT
+            </button>
+
+        </div>
+
+    </div>
+
+    <!--
+===========================================
+        NODE.JS SETUP INSTRUCTIONS
+===========================================
+
+1. Create a folder named "public".
+
+2. Move these files into the public folder:
+   - index.html
+   - style.css
+   - script.js
+
+3. Keep server.js outside the public folder.
+
+4. Install the required packages:
+      npm init -y
+      npm install express qrcode
+
+5. Start the server:
+      node server.js
+
+6. Open your browser and visit:
+      http://localhost:3000
+
+The frontend sends a POST request to "/generate".
+That route is handled inside server.js, which generates
+the QR code and sends it back to the webpage.
+
+===========================================
+-->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

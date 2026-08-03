@@ -1,0 +1,256 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#050505,#12091f,#090909);
+
+    color:white;
+
+}
+
+.container{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.system-card{
+
+    width:430px;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(139,92,246,0.4);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:
+        0 0 25px rgba(139,92,246,.25);
+
+}
+
+h1{
+
+    text-align:center;
+
+    color:#c084fc;
+
+    margin-bottom:15px;
+
+    font-size:1.8rem;
+
+}
+
+.status{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#b8aee0;
+
+}
+
+.status span{
+
+    color:#8B5CF6;
+
+}
+
+.input-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+label{
+
+    color:#d8b4fe;
+
+}
+
+input{
+
+    padding:15px;
+
+    background:#18181b;
+
+    border:1px solid #6d28d9;
+
+    color:white;
+
+    border-radius:10px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    border-color:#c084fc;
+
+    box-shadow:0 0 20px rgba(192,132,252,.4);
+
+}
+
+button{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#7c3aed;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 25px rgba(139,92,246,.7);
+
+}
+
+.artifact-section{
+
+    margin-top:40px;
+
+    text-align:center;
+
+}
+
+.artifact-section h2{
+
+    margin-bottom:20px;
+
+    color:#d8b4fe;
+
+}
+
+
+#qrContainer{
+
+    width:250px;
+
+    height:250px;
+
+    margin:auto;
+
+    border:2px dashed rgba(192,132,252,.5);
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#777;
+
+}
+
+#downloadBtn{
+
+    display:none;
+
+}
+
+#qrContainer img{
+
+    width:200px;
+
+    height:200px;
+
+    animation:fadeIn .5s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+.loading{
+
+    color:#c084fc;
+
+    animation:pulse 1s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.3;
+
+    }
+
+}
